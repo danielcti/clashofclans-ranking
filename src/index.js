@@ -5,7 +5,7 @@ const clans = require('./clans');
 
 const globalRanking = [];
 
-const AuthStr = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjYxMDBmYzU4LWVmZjctNDUwYi1iYjY5LTM0MDQ2MTU2NjZiNCIsImlhdCI6MTU3NTc2OTUzNSwic3ViIjoiZGV2ZWxvcGVyLzYwNjg2YjlhLWQxMTAtMTk5Ny1kYTNkLWRmY2EwYzNkNjAwZSIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjQ1LjIzNC4xMDAuMjM5Il0sInR5cGUiOiJjbGllbnQifV19.uafkoRCcXvGDh5QD-6PBb4P80uqz39UpnsEcH83W7DaPVQPRhBUSnu4UZJwiInawuQeCUXV6EHSuUuapUUxSFw'
+const AuthStr = require('./credentials');
 
 const getClanWarLeagueInfo = async (clanTag) => {
     const response = await api.get(`/clans/%23${clanTag}/currentwar/leaguegroup`,  { headers: { Authorization: AuthStr } });
